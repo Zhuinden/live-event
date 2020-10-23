@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.zhuinden.liveevent.observe
 import com.zhuinden.liveeventsample.R
 import com.zhuinden.liveeventsample.databinding.WordListFragmentBinding
 import com.zhuinden.liveeventsample.utils.*

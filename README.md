@@ -48,7 +48,7 @@ In order to use Live Event, you need to add jitpack to your project root gradle:
 
 and add the compile dependency to your module level gradle.
 
-    implementation 'com.github.Zhuinden:live-event:1.0.0'
+    implementation 'com.github.Zhuinden:live-event:1.1.0'
 
 ## License
 

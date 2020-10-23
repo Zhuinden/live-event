@@ -1,4 +1,4 @@
-package com.zhuinden.liveeventsample.utils
+package com.zhuinden.liveevent
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver

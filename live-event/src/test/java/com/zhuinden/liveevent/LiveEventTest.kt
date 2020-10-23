@@ -4,7 +4,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import com.zhuinden.eventemitter.EventEmitter
-import com.zhuinden.liveeventsample.utils.observe
 import org.assertj.core.api.Assertions
 import org.junit.Test
 
