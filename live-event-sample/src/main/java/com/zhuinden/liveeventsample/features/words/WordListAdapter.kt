@@ -2,11 +2,10 @@ package com.zhuinden.liveeventsample.features.words
 
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.zhuinden.liveeventsample.R
 import com.zhuinden.liveeventsample.utils.inflate
-import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.word_list_item.*
 import java.util.*
 
 class WordListAdapter : RecyclerView.Adapter<WordListAdapter.ViewHolder>() {
@@ -26,7 +25,9 @@ class WordListAdapter : RecyclerView.Adapter<WordListAdapter.ViewHolder>() {
         holder.bind(list[position])
     }
 
-    class ViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
+    class ViewHolder(containerView: View) : RecyclerView.ViewHolder(containerView) {
+        private val text = containerView.findViewById<TextView>(R.id.text)
+
         fun bind(word: String) {
             text.text = word
         }

@@ -61,9 +61,10 @@ internal class LiveEvent<T> constructor(
     }
 }
 
-inline fun <T> EventSource<T>.observe(lifecycleOwner: LifecycleOwner, crossinline eventObserver: (T) -> Unit) {
+inline fun <T: Any> EventSource<T>.observe(lifecycleOwner: LifecycleOwner, crossinline eventObserver: (T) -> Unit) {
     LiveEvent(
         this,
         lifecycleOwner,
-        EventSource.EventObserver<T> { event -> eventObserver.invoke(event) })
+        EventSource.EventObserver<T> { event -> eventObserver.invoke(event) }
+    )
 }

@@ -7,7 +7,7 @@ import com.zhuinden.simplestackextensions.services.DefaultServiceProvider
 import com.zhuinden.simplestackextensions.servicesktx.add
 import com.zhuinden.simplestackextensions.servicesktx.get
 import com.zhuinden.simplestackextensions.servicesktx.rebind
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 /**
  * Created by Zhuinden on 2020.

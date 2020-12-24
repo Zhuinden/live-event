@@ -1,16 +1,17 @@
 package com.zhuinden.liveeventsample.application
 
 import android.os.Bundle
+import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import com.zhuinden.simplestack.History
 import com.zhuinden.simplestack.StateChange
 import com.zhuinden.simplestack.navigator.Navigator
 import com.zhuinden.liveeventsample.R
+import com.zhuinden.liveeventsample.databinding.ActivityMainBinding
 import com.zhuinden.liveeventsample.features.words.WordListKey
 import com.zhuinden.simplestack.SimpleStateChanger
 import com.zhuinden.simplestackextensions.fragments.DefaultFragmentStateChanger
 import com.zhuinden.simplestackextensions.services.DefaultServiceProvider
-import kotlinx.android.synthetic.main.activity_main.*
 
 /**
  * Created by Zhuinden on 2020.
@@ -23,12 +24,14 @@ class MainActivity : AppCompatActivity(), SimpleStateChanger.NavigationHandler {
 
         setContentView(R.layout.activity_main)
 
-        fragmentStateChanger = DefaultFragmentStateChanger(supportFragmentManager, R.id.root)
+        val binding = ActivityMainBinding.bind(findViewById(Window.ID_ANDROID_CONTENT))
+
+        fragmentStateChanger = DefaultFragmentStateChanger(supportFragmentManager, R.id.fragmentRoot)
 
         Navigator.configure()
             .setStateChanger(SimpleStateChanger(this))
             .setScopedServices(DefaultServiceProvider())
-            .install(this, root, History.of(WordListKey()))
+            .install(this, binding.fragmentRoot, History.of(WordListKey()))
     }
 
     override fun onBackPressed() {
