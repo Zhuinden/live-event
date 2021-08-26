@@ -45,6 +45,21 @@ In order to use Live Event, you need to add jitpack to your project root gradle:
         // ...
     }
 
+In newer projects, you need to also update the `settings.gradle` file's `dependencyResolutionManagement` block:
+
+```
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }  // <--
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+```
+
+
 
 and add the compile dependency to your module level gradle.
 
