@@ -1,5 +1,9 @@
 # Change log
 
+-Live-Event 1.3.0 (2022-08-13)
+--------------------------------
+- Update event-emitter to 1.3.0.
+
 -Live-Event 1.2.0 (2020-12-24)
 --------------------------------
 - Update event-emitter to 1.2.0 (transitively update command-queue to 1.2.0).

@@ -1,6 +1,7 @@
 package com.zhuinden.liveeventsample.application
 
 import android.os.Bundle
+import android.view.ViewGroup
 import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import com.zhuinden.simplestack.History
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity(), SimpleStateChanger.NavigationHandler {
 
         setContentView(R.layout.activity_main)
 
-        val binding = ActivityMainBinding.bind(findViewById(Window.ID_ANDROID_CONTENT))
+        val binding = ActivityMainBinding.bind((findViewById(Window.ID_ANDROID_CONTENT) as ViewGroup).getChildAt(0))
 
         fragmentStateChanger = DefaultFragmentStateChanger(supportFragmentManager, R.id.fragmentRoot)
 

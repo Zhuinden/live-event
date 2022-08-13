@@ -63,7 +63,7 @@ dependencyResolutionManagement {
 
 and add the compile dependency to your module level gradle.
 
-    implementation 'com.github.Zhuinden:live-event:1.2.0'
+    implementation 'com.github.Zhuinden:live-event:1.3.0'
 
 ## License
 
