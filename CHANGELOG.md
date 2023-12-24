@@ -1,5 +1,9 @@
 # Change log
 
+-Live-Event 1.4.0 (2023-12-24)
+--------------------------------
+- Update event-emitter to 1.4.0.
+
 -Live-Event 1.3.0 (2022-08-13)
 --------------------------------
 - Update event-emitter to 1.3.0.
